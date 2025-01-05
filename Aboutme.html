@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .about-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        p:hover {
+            background-color: #eef2f2;
+        }
+
+        .projects-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .project {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project h3 {
+            color: #333;
+            font-size: 1.5rem;
+        }
+
+        .project p {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .project a {
+            text-decoration: none;
+            color: #f39c12;
+            font-weight: bold;
+        }
+
+        .project a:hover {
+            color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <h2>About Me</h2>
+        <p onclick="changeBackgroundColor(this)"><small>I am a Full-Stack Java Developer with expertise in developing scalable and secure web applications using Java, Spring Boot,and various front-end technologies.I strive to create user-friendly and efficient applications.</small> </p>
+    </div>
+
+    <!-- Education Section -->
+    <div class="projects-container">
+        <h2>Education</h2>
+        <!-- Project 1 -->
+        <div class="project">
+  <p><small> I completed my Graduation B.Tech in Computer Science and Engineering at Vaagdevi College of Engineering,which is affiliated with JNTU,Hyderabad.Throughout my academic journey 2020-2024,I gained a solid foundation in computerscience principles, programming, data structures, algorithms,and software engineering.</small> </p>                          
+ </div>
+<script>
+        // Function to change the background color of the paragraph when clicked
+        function changeBackgroundColor(element) {
+            element.style.backgroundColor = "#dfe7e7";
+            setTimeout(() => {
+                element.style.backgroundColor = ""; // Reset after 1 second
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

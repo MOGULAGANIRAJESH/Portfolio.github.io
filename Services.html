@@ -1,0 +1,76 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .services-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            font-size: 1.2rem;
+            padding: 15px;
+            background-color: #077b32;
+            color: white;
+            margin: 10px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        li:hover {
+            background-color: #055a26;
+            transform: scale(1.05);
+        }
+
+        .highlighted {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <div class="services-container">
+        <h2>Services</h2>
+        <ul>
+            <li onclick="toggleHighlight(this)">Full-Stack Development</li>
+            <li onclick="toggleHighlight(this)">Web Application Development</li>
+            <li onclick="toggleHighlight(this)">API Development and Integration</li>
+            <li onclick="toggleHighlight(this)">Bug Fixing and Maintenance</li>
+        </ul>
+    </div>
+
+    <script>
+        // Function to toggle the highlight class on a service item
+        function toggleHighlight(serviceItem) {
+            serviceItem.classList.toggle('highlighted');
+        }
+    </script>
+</body>
+</html>
