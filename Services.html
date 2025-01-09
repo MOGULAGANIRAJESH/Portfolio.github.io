@@ -1,76 +1,137 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>Services & Projects</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
             margin: 0;
             padding: 0;
         }
 
-        .services-container {
-            width: 100%;
-            max-width: 600px;
-            margin: 50px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
         h2 {
             text-align: center;
-            font-size: 2rem;
             color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 20px;
+        .services-container, .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
         }
 
-        li {
-            font-size: 1.2rem;
-            padding: 15px;
-            background-color: #077b32;
-            color: white;
-            margin: 10px 0;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
-            cursor: pointer;
+        /* Service Card Styles */
+        .service-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        li:hover {
-            background-color: #055a26;
-            transform: scale(1.05);
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
         }
 
-        .highlighted {
-            background-color: #e67e22;
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #055a26;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Project Card Styles */
+        .project-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: #055a26;
+            font-weight: bold;
+        }
+
+        .project-card a:hover {
+            color: #e67e22;
         }
     </style>
 </head>
 <body>
+
+    <!-- Services Section -->
     <div class="services-container">
-        <h2>Services</h2>
-        <ul>
-            <li onclick="toggleHighlight(this)">Full-Stack Development</li>
-            <li onclick="toggleHighlight(this)">Web Application Development</li>
-            <li onclick="toggleHighlight(this)">API Development and Integration</li>
-            <li onclick="toggleHighlight(this)">Bug Fixing and Maintenance</li>
-        </ul>
+        <div class="service-card">
+            <h3>Web Development</h3>
+            <p>Building modern, responsive websites and web applications using the latest technologies like HTML, CSS, JavaScript, React, and more.</p>
+        </div>
+        <div class="service-card">
+            <h3>Backend Development</h3>
+            <p>Creating robust backend systems using Java, Spring Boot, and RESTful APIs to ensure seamless performance and scalability.</p>
+        </div>
+        <div class="service-card">
+            <h3>Database Management</h3>
+            <p>Managing databases like MySQL, ensuring data security, efficient queries, and seamless integration with web applications.</p>
+        </div>
     </div>
 
-    <script>
-        // Function to toggle the highlight class on a service item
-        function toggleHighlight(serviceItem) {
-            serviceItem.classList.toggle('highlighted');
-        }
-    </script>
+    <!-- Projects Section -->
+    <h2>My Projects</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <h3>Document Chatter Web Application</h3>
+            <p><b>Technology:</b> Python, HTML, CSS, JavaScript, Flask</p>
+            <p><b>Description:</b> This app allows users to upload documents(PDF, Word, PPT) and interact with them through a live chat interface, making collaboration easier.The application aims to enhance document collaboration by providing instant summaries, clarifications, and context-based interactions, improving productivity and teamwork.</p>
+            <a href="https://docspeak-d38fea4e11fe.herokuapp.com/" target="_blank">Visit Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Student Management System</h3>
+            <p><b>Technology:</b> <br><b>Programming Language:</b> Java
+<br><b>Database:</b> MySQL/SQL
+<br><b>Backend Framework:</b> Spring Boot
+<br><b>Frontend:</b> React/Angular
+<br><b>IDE:</b>Eclipse
+<br><b>Build Tool:</b> Maven<p><b>Description:</b>The Student Management System is aJava-based application designed to streamline and automate the management of student-related information within an educational institution.The system allows administrators to manage student records efficiently,including adding,updating,and deleting student details.It provides a user-friendly interface for managing student data.</p>
+        </div>
+    </div>
+
 </body>
 </html>
