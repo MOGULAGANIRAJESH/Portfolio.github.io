@@ -6,53 +6,66 @@
     <title>About</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             flex-direction: column;
+            min-height: 100vh;
         }
 
+        /* About Container Style */
         .about-container {
-            background-color: white;
+            background-color: #ffffff;
             padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about-container h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .about-container p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            padding: 15px;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            width: 80%;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .about-container p:hover {
+            background-color: #eef2f2;
+            transform: scale(1.02);
+        }
+
+        /* Education Section */
+        .projects-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 90%;
             max-width: 600px;
             margin-bottom: 20px;
         }
 
-        h2 {
-            text-align: center;
+        .projects-container h2 {
             font-size: 2rem;
             color: #333;
-        }
-
-        p {
-            font-size: 1.2rem;
-            color: #555;
-            line-height: 1.6;
-            text-align: center;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        p:hover {
-            background-color: #eef2f2;
-        }
-
-        .projects-container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 600px;
+            margin-bottom: 20px;
         }
 
         .project {
@@ -60,45 +73,128 @@
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .project h3 {
-            color: #333;
-            font-size: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .project p {
+            font-size: 1.1rem;
             color: #555;
-            font-size: 1rem;
-            margin-bottom: 15px;
+            line-height: 1.6;
         }
 
+        /* Link Style */
         .project a {
             text-decoration: none;
             color: #f39c12;
             font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
         }
 
         .project a:hover {
             color: #e67e22;
         }
+
+        /* Internship and Certificates Section */
+        .internship-container, .certificates-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .internship-container h2, .certificates-container h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .internship, .certificate {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .internship p, .certificate p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
     </style>
 </head>
 <body>
+
+    <!-- About Section -->
     <div class="about-container">
         <h2>About Me</h2>
-        <p onclick="changeBackgroundColor(this)"><small>I am a Full-Stack Java Developer with expertise in developing scalable and secure web applications using Java, Spring Boot,and various front-end technologies.I strive to create user-friendly and efficient applications.</small> </p>
+        <p onclick="changeBackgroundColor(this)">
+            I am a passionate Full Stack Developer with a strong background in Java-based backend development and modern front-end frameworks. Committed to delivering seamless web solutions through clean code, optimized performance, and user-centered design. I am constantly seeking opportunities to grow my expertise and contribute to dynamic, fast-paced teams using the latest web technologies.
+        </p>
     </div>
 
     <!-- Education Section -->
     <div class="projects-container">
         <h2>Education</h2>
-        <!-- Project 1 -->
         <div class="project">
-  <p><small> I completed my Graduation B.Tech in Computer Science and Engineering at Vaagdevi College of Engineering,which is affiliated with JNTU,Hyderabad.Throughout my academic journey 2020-2024,I gained a solid foundation in computerscience principles, programming, data structures, algorithms,and software engineering.</small> </p>                          
- </div>
-<script>
+            <p>
+                I completed my Bachelor of Technology in Computer Science and Engineering at Vaagdevi College of Engineering, affiliated with JNTU, Hyderabad from 2020 to 2024. Throughout my academic journey, I gained a solid foundation in computer science principles, programming, data structures, algorithms, and software engineering. My coursework and hands-on projects helped me develop a strong problem-solving mindset and a passion for learning modern technologies.
+            </p>
+        </div>
+    </div>
+
+    <!-- Internship Section -->
+    <div class="internship-container">
+        <h2>Internships</h2>
+        <div class="internship">
+            <p><b>JAVA FULL STACK DEVELOPMENT</b><br> 
+                I completed a 3-month internship at Manac Info Tech Pvt Ltd during the summer of 2024, where I contributed to developing a web application using Java and Spring Boot. During the internship, I worked closely with the development team to build key features, optimize performance, and troubleshoot issues. This experience enhanced my practical skills and provided insights into real-world software development practices.
+            </p>
+        </div>
+    </div>
+
+    <!-- Certificates Section -->
+    <div class="certificates-container">
+        <h2>Certificates</h2>
+        <div class="certificate">
+            <p>
+                <strong>Java Full Stack Development</strong> - Issued by Manac Infotech Pvt Ltd in May 2024.
+            </p>
+        </div>
+        <div class="certificate">
+            <p>
+                <strong>Front End Web Development</strong> - Issued by Code Clause.
+            </p>
+        </div>
+        <div class="certificate">
+            <p>
+                <strong>Python Fundamentals & Android Application Development</strong> - Issued by Great Learning in August 2023.
+            </p>
+        </div>
+        <div class="certificate">
+            <p>
+                <strong>SQL & Database Engine</strong> - Issued by Learn Tube.
+            </p>
+        </div>
+        <div class="certificate">
+            <p>
+                <strong>AWS Academy for Cloud Foundation</strong> - Issued by AWS Academy.
+            </p>
+        </div>
+        <div class="certificate">
+            <p>
+                <strong>PGDCA Course</strong> - Issued by Human Resource Development Society.
+            </p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
         // Function to change the background color of the paragraph when clicked
         function changeBackgroundColor(element) {
             element.style.backgroundColor = "#dfe7e7";
@@ -107,5 +203,6 @@
             }, 1000);
         }
     </script>
+
 </body>
 </html>
