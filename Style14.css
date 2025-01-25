@@ -123,8 +123,8 @@ section{
     align-items: center;
 }
 .main-container .image{
-    width: 260px;
-    height: 260px;
+    width: 330px;
+    height: 330px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 50px #077b32;
