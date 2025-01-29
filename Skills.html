@@ -5,77 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills</title>
     <style>
+        /* General Styles */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
         }
 
         h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #4a4a4a;
             text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+        /* Grid Layout */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Skill Card */
+        .skill-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            align-items: center;
         }
 
-        li {
-            font-size: 1.3rem;
-            padding: 15px;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            text-align: center;
-            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+        .skill-card img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
         }
 
-        li:hover {
-            background-color: #45a049;
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        .skill-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
         }
 
         .highlighted {
-            background-color: #FF5722;
-            transform: scale(1.05);
+            background: rgba(255, 87, 34, 0.8);
+            transform: scale(1.1);
         }
 
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
     </style>
 </head>
 <body>
-    <div>
+    <div class="container">
         <h2>Skills</h2>
-        <ul>
-            <li onclick="toggleHighlight(this)">JAVA</li>
-            <li onclick="toggleHighlight(this)">SPRING/SPRING BOOT</li>
-            <li onclick="toggleHighlight(this)">SQL/PLSQL</li>
-            <li onclick="toggleHighlight(this)">JAVASCRIPT</li>
-            <li onclick="toggleHighlight(this)">REACT</li>
-            <li onclick="toggleHighlight(this)">HTML/CSS/BOOTSTRAP</li>
-            <li onclick="toggleHighlight(this)">MVC ARCHITECTURE</li>
-            <li onclick="toggleHighlight(this)">JDBC</li>
-            <li onclick="toggleHighlight(this)">PYTHON</li>
-            <li onclick="toggleHighlight(this)">SERVLETS</li>
-        </ul>
+        <div class="skills-grid">
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968282.png" alt="Java">
+                <span>Java</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/2772/2772128.png" alt="SQL">
+                <span>SQL</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="JavaScript">
+                <span>JavaScript</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/1126/1126012.png" alt="React">
+                <span>React</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/174/174854.png" alt="HTML">
+                <span>HTML</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/732/732190.png" alt="CSS">
+                <span>CSS</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968672.png" alt="Bootstrap">
+                <span>Bootstrap</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/10208/10208613.png" alt="MVC Architecture">
+                <span>MVC Architecture</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg" alt="Spring Boot" width="50">
+                <span>Spring Boot</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/733/733609.png" alt="GitHub">
+                <span>GitHub</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968350.png" alt="Python">
+                <span>Python</span>
+            </div>
+        </div>
     </div>
 
     <script>
-        // Function to toggle the highlight class on skills
         function toggleHighlight(skillElement) {
             skillElement.classList.toggle('highlighted');
         }
